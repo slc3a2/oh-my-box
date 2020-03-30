@@ -1,7 +1,12 @@
 <template>
   <div id="app">
     <FlyBox>
-      <FlyBoxItem>
+      <FlyBoxItem
+        :scrollHeight='scrollHeight'
+        :quickScrollHeight='quickScrollHeight'
+        :scrollDuration='scrollDuration'
+        :itemHeight='itemHeight'
+      >
         <section class='item' v-for='(item, idx) in 5' :key='idx'>{{item}}</section>
       </FlyBoxItem>
     </FlyBox>
@@ -13,6 +18,14 @@ import FlyBox from '@/components/FlyBox'
 import FlyBoxItem from '@/components/FlyBoxItem'
 export default {
   name: 'App',
+  data:()=>{
+    return {
+      scrollHeight:300,
+      quickScrollHeight:20,
+      scrollDuration: 400,
+      itemHeight:100
+    }
+  },
   components: {
     FlyBox,
     FlyBoxItem
@@ -29,7 +42,10 @@ export default {
   .item{
     width:100vw;
     height:100vh;
-    background-color:gray;
+    // background-color:gray;
+  }
+  section.item{
+    border:1px solid red;
   }
 }
 </style>
