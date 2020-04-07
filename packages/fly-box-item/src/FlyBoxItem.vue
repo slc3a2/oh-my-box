@@ -5,14 +5,9 @@
 </template>
 <script>
 export default {
-  props:{
-
-  },
+  name:'FlyBoxItem',
   data:()=>{
     return {}
-  },
-  created(){
-
   }
 }
 </script>

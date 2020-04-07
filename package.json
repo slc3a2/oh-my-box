@@ -1,10 +1,16 @@
 {
-  "name": "flyBox",
+  "name": "fly-box",
   "version": "0.1.0",
-  "private": true,
+  "author": "llqi <codedance98@gmail.com>",
+  "description": "vue tiktok scroll box",
+  "main": "lib/fly-box.common.js",
+  "keyword": "vue tiktok scroll box",
+  "license": "MIT",
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name fly-box --dest lib packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

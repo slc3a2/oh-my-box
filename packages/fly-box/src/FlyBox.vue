@@ -17,6 +17,7 @@
 </template>
 <script>
 export default {
+	name:'FlyBox',
 	props: {
 		// 翻页距离阈值 超过可视距离切换页面 否则回到原来位置 单位px
 		scrollHeight: {
@@ -80,7 +81,7 @@ export default {
 			let t = e.changedTouches[0].pageY
 			let endTime = new Date().getTime()
 			if (endTime - this.startTime < 10 && this.startY < 30) {
-				console.log('模拟点击事件')
+				// console.log('模拟点击事件')
 				return
 			}
 			if (endTime - this.startTime < this.scrollDuration) {
@@ -90,7 +91,7 @@ export default {
 					this.nextHandle()
 				} else {
 					this.resetOffsetHandle()
-					console.log('符合时间操作 但是不符合最短距离')
+					// console.log('符合时间操作 但是不符合最短距离')
 				}
 			} else {
 				let offset = t - this.startY

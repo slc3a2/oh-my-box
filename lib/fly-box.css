@@ -1,0 +1,1 @@
+#fly-box-component{position:relative;overflow:hidden;width:100vw;height:100vh}#fly-box-component .fly-box-gesture{-webkit-transform:translateZ(0);-webkit-backface-visibility:hidden;-webkit-perspective:1000;will-change:--webkit-transform}#fly-box-component .trans{-webkit-transition:all .3s ease-out}.fly-box-item{width:100vw;height:100vh;border:1px solid red;font-size:35px}

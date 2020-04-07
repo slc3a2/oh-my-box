@@ -6,16 +6,12 @@
       :scrollDuration='scrollDuration'
       @change='change'
     >
-      <FlyBoxItem v-for='(item, idx) in 5' :key='idx'>
-        
-      </FlyBoxItem>
+      <FlyBoxItem v-for='(item, idx) in 5' :key='idx'>{{item}}</FlyBoxItem>
     </FlyBox>
   </div>
 </template>
 
 <script>
-import FlyBox from '@/components/FlyBox'
-import FlyBoxItem from '@/components/FlyBoxItem'
 export default {
   name: 'App',
   data:()=>{
@@ -29,10 +25,6 @@ export default {
     change(idx, total, direction){
       console.log(idx, total, direction)
     }
-  },
-  components: {
-    FlyBox,
-    FlyBoxItem
   }
 }
 </script>
