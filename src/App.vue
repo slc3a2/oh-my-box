@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <FlyBox>
-      <FlyBoxItem
-        :scrollHeight='scrollHeight'
-        :quickScrollHeight='quickScrollHeight'
-        :scrollDuration='scrollDuration'
-        :itemHeight='itemHeight'
-      >
-        <section class='item' v-for='(item, idx) in 5' :key='idx'>{{item}}</section>
+    <FlyBox
+      :scrollHeight='scrollHeight'
+      :quickScrollHeight='quickScrollHeight'
+      :scrollDuration='scrollDuration'
+      @change='change'
+    >
+      <FlyBoxItem v-for='(item, idx) in 5' :key='idx'>
+        
       </FlyBoxItem>
     </FlyBox>
   </div>
@@ -22,8 +22,12 @@ export default {
     return {
       scrollHeight:300,
       quickScrollHeight:20,
-      scrollDuration: 400,
-      itemHeight:100
+      scrollDuration: 400
+    }
+  },
+  methods:{
+    change(idx, total, direction){
+      console.log(idx, total, direction)
     }
   },
   components: {
@@ -34,18 +38,14 @@ export default {
 </script>
 
 <style lang='scss'>
+*{
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  .item{
-    width:100vw;
-    height:100vh;
-    // background-color:gray;
-  }
-  section.item{
-    border:1px solid red;
-  }
 }
 </style>

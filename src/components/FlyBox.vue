@@ -1,15 +1,15 @@
 <template>
 	<section id="fly-box-component">
 		<div
-			class="swiper-gesture"
-			ref="swiperContainter"
+			class="fly-box-gesture"
+			ref="flyBoxContainter"
 			@touchstart.stop="touchStart"
 			@touchmove.stop="touchMove"
 			@touchend.stop="touchEnd"
 			@touchcancel.stop="touchEnd"
 			:style="{ webkitTransform: 'translate3d(0,' + currentPosition + 'px,0)' }"
 		>
-			<div class="swiper-item-wrap">
+			<div class="fly-box-item-wrap">
 				<slot></slot>
 			</div>
 		</div>
@@ -53,17 +53,19 @@ export default {
 			defaultItemHeight: window.innerHeight, // 默认item高度
 			initialPosition: 0, // 每次 touchStart 滑动前的初始位置
 			currentPosition: 0, // touchMove 过程中的实际位置
-			startY: 0 // touchstart 开始是，手指触控点y轴位置
+			startY: 0, // touchstart 开始是，手指触控点y轴位置
+			direction: ''
 		}
 	},
 	created() {
+		this.resetOffsetHandle()
 	},
 	activated() {
 		this.resetOffsetHandle()
 	},
 	methods: {
 		touchStart(e) {
-			this.$refs.swiperContainter.classList.remove('trans')
+			this.$refs.flyBoxContainter.classList.remove('trans')
 			this.startTime = new Date().getTime()
 			this.startY = e.touches[0].pageY
 			this.initialPosition = this.currentPosition // 本次滑动前的初始位置
@@ -74,7 +76,7 @@ export default {
 			this.currentPosition = translate
 		},
 		touchEnd(e) {
-			this.$refs.swiperContainter.classList.add('trans')
+			this.$refs.flyBoxContainter.classList.add('trans')
 			let t = e.changedTouches[0].pageY
 			let endTime = new Date().getTime()
 			if (endTime - this.startTime < 10 && this.startY < 30) {
@@ -103,28 +105,33 @@ export default {
 		},
 		// 下一页
 		nextHandle() {
-			// if (this.total === this.page + 1) {
-			// 	this.resetOffsetHandle()
-			// 	// 到底部 加载更多
-			// 	return
-			// }
-			this.page++
-			this.resetOffsetHandle()
-			this.$emit('change', this.page)
+			this.direction = 'next';
+			let itemLength = document.querySelector('.fly-box-item-wrap').children.length;
+			if(itemLength == this.page + 1){
+				// 到达底部
+				this.resetOffsetHandle()
+				this.$emit('change', itemLength, itemLength, this._self)
+			}else{
+				this.page++
+				this.resetOffsetHandle()
+				this.$emit('change', this.page, itemLength, this._self)
+			}
 		},
 		// 上一页
 		prevHandle() {
-			console.log('上一页')
+			this.direction = 'prev';
+			let itemLength = document.querySelector('.fly-box-item-wrap').children.length;
 			if (this.page <= 0) {
-				// 到顶部 下拉刷新
-				// TODO: 下拉刷新
+				// 到达顶部
 				this.page = 0
+				this.$emit('change', this.page, itemLength, this._self)
 				this.resetOffsetHandle()
-				return
+			}else{
+				this.page--
+				this.resetOffsetHandle()
+				this.$emit('change', this.page, itemLength, this._self)
 			}
-			this.page--
-			this.resetOffsetHandle()
-			this.$emit('change', this.page)
+			
 		},
 		// 重置偏移量
 		resetOffsetHandle() {
@@ -140,7 +147,9 @@ export default {
 #fly-box-component {
 	position: relative;
 	overflow: hidden;
-	.swiper-gesture {
+	width:100vw;
+	height:100vh;
+	.fly-box-gesture {
 		-webkit-transform: translate3d(0, 0, 0);
 		-webkit-backface-visibility: hidden;
 		-webkit-perspective: 1000;
