@@ -6,7 +6,6 @@
   "main": "lib/fly-box.common.js",
   "keyword": "vue tiktok scroll box",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
