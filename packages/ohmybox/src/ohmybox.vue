@@ -140,8 +140,7 @@ export default {
 		},
 		//暂停播放方法
 		playerToggle() {}
-	},
-	components: {}
+	}
 }
 </script>
 <style lang="scss">

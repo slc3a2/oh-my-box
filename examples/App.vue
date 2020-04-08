@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { OhMyBox, OhMyBoxItem } from '../packages/index.js'
 export default {
   name: 'App',
   data:()=>{
@@ -25,7 +26,11 @@ export default {
     change(idx, total, direction){
       console.log(idx, total, direction)
     }
-  }
+  },
+  components: {
+		OhMyBox,
+		OhMyBoxItem
+	}
 }
 </script>
 
