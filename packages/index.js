@@ -1,9 +1,9 @@
-import FlyBox from './fly-box'
-import FlyBoxItem from './fly-box-item'
+import OhMyBox from './ohmybox'
+import OhMyBoxItem from './ohmybox-item'
  
 const components = [
-  FlyBox,
-  FlyBoxItem
+  OhMyBox,
+  OhMyBoxItem
 ]
  
 const install = function (Vue) {
@@ -17,6 +17,6 @@ if (typeof window !== 'undefined' && window.Vue) {
  
 export default{
   install,
-  FlyBox,
-  FlyBoxItem
+  OhMyBox,
+  OhMyBoxItem
 }

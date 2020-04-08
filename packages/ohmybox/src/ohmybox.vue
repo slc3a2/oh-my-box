@@ -1,15 +1,15 @@
 <template>
-	<section id="fly-box-component">
+	<section id="ohmybox-component">
 		<div
-			class="fly-box-gesture"
-			ref="flyBoxContainter"
+			class="ohmybox-gesture"
+			ref="ohmyboxContainter"
 			@touchstart.stop="touchStart"
 			@touchmove.stop="touchMove"
 			@touchend.stop="touchEnd"
 			@touchcancel.stop="touchEnd"
 			:style="{ webkitTransform: 'translate3d(0,' + currentPosition + 'px,0)' }"
 		>
-			<div class="fly-box-item-wrap">
+			<div class="ohmybox-item-wrap">
 				<slot></slot>
 			</div>
 		</div>
@@ -17,7 +17,7 @@
 </template>
 <script>
 export default {
-	name:'FlyBox',
+	name:'ohmybox',
 	props: {
 		// 翻页距离阈值 超过可视距离切换页面 否则回到原来位置 单位px
 		scrollHeight: {
@@ -121,7 +121,7 @@ export default {
 		// 上一页
 		prevHandle() {
 			this.direction = 'prev';
-			let itemLength = document.querySelector('.fly-box-item-wrap').children.length;
+			let itemLength = document.querySelector('.ohmybox-item-wrap').children.length;
 			if (this.page <= 0) {
 				// 到达顶部
 				this.page = 0
@@ -145,12 +145,12 @@ export default {
 }
 </script>
 <style lang="scss">
-#fly-box-component {
+#ohmybox-component {
 	position: relative;
 	overflow: hidden;
 	width:100vw;
 	height:100vh;
-	.fly-box-gesture {
+	.ohmybox-gesture {
 		-webkit-transform: translate3d(0, 0, 0);
 		-webkit-backface-visibility: hidden;
 		-webkit-perspective: 1000;

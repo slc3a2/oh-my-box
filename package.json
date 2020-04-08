@@ -1,16 +1,16 @@
 {
-  "name": "fly-box",
+  "name": "ohmybox",
   "version": "0.1.0",
   "author": "llqi <codedance98@gmail.com>",
-  "description": "vue tiktok scroll box",
-  "main": "lib/fly-box.common.js",
+  "description": "A Scroll Component for Vue.js.",
+  "main": "lib/ohmybox.common.js",
   "keyword": "vue tiktok scroll box",
   "private":false,
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lib": "vue-cli-service build --target lib --name fly-box --dest lib packages/index.js",
+    "lib": "vue-cli-service build --target lib --name ohmybox --dest lib packages/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

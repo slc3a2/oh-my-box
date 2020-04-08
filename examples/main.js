@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import FlyBox from '../packages/index.js'
-import FlyBoxItem from '../packages/index.js'
-Vue.use(FlyBox)
-Vue.use(FlyBoxItem)
+import OhMyBox from '../packages/index.js'
+import OhMyBoxItem from '../packages/index.js'
+
+Vue.use(OhMyBox)
+Vue.use(OhMyBoxItem)
 
 Vue.config.productionTip = false
 
