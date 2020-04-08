@@ -66,7 +66,7 @@ export default {
 	},
 	methods: {
 		touchStart(e) {
-			this.$refs.flyBoxContainter.classList.remove('trans')
+			this.$refs.ohmyboxContainter.classList.remove('trans')
 			this.startTime = new Date().getTime()
 			this.startY = e.touches[0].pageY
 			this.initialPosition = this.currentPosition // 本次滑动前的初始位置
@@ -77,7 +77,7 @@ export default {
 			this.currentPosition = translate
 		},
 		touchEnd(e) {
-			this.$refs.flyBoxContainter.classList.add('trans')
+			this.$refs.ohmyboxContainter.classList.add('trans')
 			let t = e.changedTouches[0].pageY
 			let endTime = new Date().getTime()
 			if (endTime - this.startTime < 10 && this.startY < 30) {

@@ -1,4 +1,4 @@
-# fly-box
+# ohmybox
 
 ## Project setup
 ```
