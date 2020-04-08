@@ -143,20 +143,20 @@ export default {
 	}
 }
 </script>
-<style lang="scss">
+<style scoped>
 #ohmybox-component {
 	position: relative;
 	overflow: hidden;
 	width:100vw;
 	height:100vh;
-	.ohmybox-gesture {
-		-webkit-transform: translate3d(0, 0, 0);
-		-webkit-backface-visibility: hidden;
-		-webkit-perspective: 1000;
-		will-change: --webkit-transform;
-	}
-	.trans {
-		-webkit-transition: all 0.3s ease-out;
-	}
+}
+.ohmybox-gesture {
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	will-change: --webkit-transform;
+}
+.trans {
+	-webkit-transition: all 0.3s ease-out;
 }
 </style>
