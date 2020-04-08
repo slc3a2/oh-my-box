@@ -107,7 +107,7 @@ export default {
 		// 下一页
 		nextHandle() {
 			this.direction = 'next';
-			let itemLength = document.querySelector('.fly-box-item-wrap').children.length;
+			let itemLength = document.querySelector('.ohmybox-item-wrap').children.length;
 			if(itemLength == this.page + 1){
 				// 到达底部
 				this.resetOffsetHandle()
