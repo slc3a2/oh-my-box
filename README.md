@@ -27,43 +27,43 @@ import 'ohmybox/lib/ohmybox.css'
 ## Attributes
 
 <table>
-        <tr>
-            <th>参数</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-        </tr>
-        <tr>
-            <th>scrollHeight</th>
-            <th>触发翻页高度</th>
-            <th>Number</th>
-            <th>300 (px)</th>
-        </tr>
-        <tr>
-            <th>scrollDuration</th>
-            <th>触发翻页滚动时间</th>
-            <th>Mumber</th>
-            <th>400 (ms)</th>
-        </tr>
-        <tr>
-            <th>quickScrollHeight</th>
-            <th>快速滑动时，触发翻页高度</th>
-            <th>Number</th>
-            <th>20 (px)</th>
-        </tr>
-    </table>
+    <tr>
+        <th>参数</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+    </tr>
+    <tr>
+        <th>scrollHeight</th>
+        <th>触发翻页高度</th>
+        <th>Number</th>
+        <th>300 (px)</th>
+    </tr>
+    <tr>
+        <th>scrollDuration</th>
+        <th>触发翻页滚动时间</th>
+        <th>Mumber</th>
+        <th>400 (ms)</th>
+    </tr>
+    <tr>
+        <th>quickScrollHeight</th>
+        <th>快速滑动时，触发翻页高度</th>
+        <th>Number</th>
+        <th>20 (px)</th>
+    </tr>
+</table>
 
 ## Event
 
 <table>
-        <tr>
-            <th>方法</th>
-            <th>说明</th>
-            <th>参数</th>
-        </tr>
-        <tr>
-            <th>change</th>
-            <th>翻页回调方法</th>
-            <th>(当前页下标，总下标，当前项对象)</th>
-        </tr>
-    </table>
+    <tr>
+        <th>方法</th>
+        <th>说明</th>
+        <th>参数</th>
+    </tr>
+    <tr>
+        <th>change</th>
+        <th>翻页回调方法</th>
+        <th>(当前页下标，总下标，当前项对象)</th>
+    </tr>
+</table>
