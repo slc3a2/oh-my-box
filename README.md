@@ -66,5 +66,4 @@ import 'ohmybox/lib/ohmybox.css'
             <th>翻页回调方法</th>
             <th>(当前页下标，总下标，当前项对象)</th>
         </tr>
- 
     </table>
