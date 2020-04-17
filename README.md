@@ -1,5 +1,5 @@
 ## OhMyBox
->A Scroll Component for Vue.js.
+>A Scroll Component for Vue.js
 
 ## Links
 - [Homepage](https://github.com/llqi/oh-my-box)
@@ -19,7 +19,10 @@ import 'ohmybox/lib/ohmybox.css'
   :scrollHeight='scrollHeight'
   :quickScrollHeight='quickScrollHeight'
   :scrollDuration='scrollDuration'
+  :clickDuration='clickDuration'
+  :clickDistance='clickDistance'
   @change='change'
+  @click='click'
 >
   <OhMyBoxItem v-for='(item, idx) in 5' :key='idx'>{{item}}</OhMyBoxItem>
 </OhMyBox>
@@ -51,9 +54,21 @@ import 'ohmybox/lib/ohmybox.css'
             <th>Number</th>
             <th>20 (px)</th>
         </tr>
+        <tr>
+            <th>clickDuration</th>
+            <th>模拟点击方法touchstart到touchend持续时间</th>
+            <th>Number</th>
+            <th>10 (ms)</th>
+        </tr>
+        <tr>
+            <th>clickDistance</th>
+            <th>模拟点击方法touchstart到touchend移动距离</th>
+            <th>Number</th>
+            <th>30 (px)</th>
+        </tr>
     </table>
 
-## Event
+## Events
 
 <table>
         <tr>
@@ -66,5 +81,13 @@ import 'ohmybox/lib/ohmybox.css'
             <th>翻页回调方法</th>
             <th>(当前页下标，总下标，当前项对象)</th>
         </tr>
+        <tr>
+            <th>click</th>
+            <th>点击方法</th>
+            <th>(当前页下标，总下标，当前项对象)</th>
+        </tr>
  
     </table>
+
+
+
