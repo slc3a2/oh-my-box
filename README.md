@@ -1,5 +1,6 @@
 ## OhMyBox
 >A Scroll Component for Vue.js
+<div style='text-align:center;'><img width='600px' height='350px;' src='https://pengyinh5.oss-cn-beijing.aliyuncs.com/478e715220d3a8ee4a9fce6f0cea817b.gif' alt='example image'/></div>
 
 ## Links
 - [Homepage](https://github.com/llqi/oh-my-box)
