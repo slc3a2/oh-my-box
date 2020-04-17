@@ -31,6 +31,18 @@ export default {
 				return 20
 			}
 		},
+		// 模拟点击起始点和结束点操作持续时间
+		clickDuration:{
+			default: function() {
+				return 10
+			}
+		},
+		// 模拟点击起始点和结束点距离
+		clickDistance:{
+			default: function() {
+				return 30
+			}
+		},
 		// 滚动时间持续 小于这个值 会直接翻页 否则回到原来位置 单位 毫秒
 		scrollDuration: {
 			default: function() {
@@ -42,6 +54,12 @@ export default {
 			default: function() {
 				return 0
 			}
+		},
+		change: {
+			default: ()=>{}
+		},
+		click: {
+			default: ()=>{}
 		}
 
 	},
@@ -60,6 +78,9 @@ export default {
 	},
 	created() {
 		this.resetOffsetHandle()
+	},
+	mounted() {
+		window.addEventListener("resize",this.onresize);
 	},
 	activated() {
 		this.resetOffsetHandle()
@@ -80,9 +101,11 @@ export default {
 			this.$refs.ohmyboxContainter.classList.add('trans')
 			let t = e.changedTouches[0].pageY
 			let endTime = new Date().getTime()
-			if (endTime - this.startTime < 10 && this.startY < 30) {
+			if (endTime - this.startTime < this.clickDuration && t - this.startY < this.clickDistance) {
 				// console.log('模拟点击事件')
-				return
+				let itemLength = document.querySelector('.ohmybox-item-wrap').children.length;
+				this.$emit('click', this.page, itemLength, this._self)
+				return;
 			}
 			if (endTime - this.startTime < this.scrollDuration) {
 				if (t - this.startY > this.quickScrollHeight) {
@@ -138,14 +161,15 @@ export default {
 		resetOffsetHandle() {
 			this.currentPosition = -this.page * (this.itemHeight || this.defaultItemHeight)
 		},
-		//暂停播放方法
-		playerToggle() {}
+		onresize(){
+			this.defaultItemHeight = window.innerHeight;
+		}
 	}
 }
 </script>
 <style scoped>
 #ohmybox-component {
-	position: relative;
+	position: fixed;
 	overflow: hidden;
 	width:100vw;
 	height:100vh;
