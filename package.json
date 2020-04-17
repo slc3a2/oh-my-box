@@ -4,7 +4,7 @@
   "author": "llqi <codedance98@gmail.com>",
   "description": "A Scroll Component for Vue.js.",
   "main": "lib/ohmybox.common.js",
-  "keyword": "vue tiktok scroll component box tool",
+  "keywords": "vue tiktok scroll component box tool",
   "private": false,
   "license": "MIT",
   "homepage": "https://github.com/llqi/oh-my-box",
