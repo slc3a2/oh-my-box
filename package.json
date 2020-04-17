@@ -1,10 +1,6 @@
 {
   "name": "ohmybox",
-<<<<<<< HEAD
-  "version": "0.1.4",
-=======
   "version": "0.1.5",
->>>>>>> dev
   "author": "llqi <codedance98@gmail.com>",
   "description": "A Scroll Component for Vue.js.",
   "main": "lib/ohmybox.common.js",
