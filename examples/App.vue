@@ -47,12 +47,4 @@ export default {
   padding: 0;
   margin: 0;
 }
-.item{
-  width:100vw;
-  height:100vh;
-  background:gray;
-  text-align:center;
-  font-size: 50px;
-  border-bottom:1px solid red;
-}
 </style>
