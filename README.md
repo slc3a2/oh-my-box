@@ -5,6 +5,7 @@
 ## Links
 - [Homepage](https://github.com/llqi/oh-my-box)
 - [Bugs](https://github.com/llqi/oh-my-box/issues)
+- [Npm](https://www.npmjs.com/package/ohmybox)
 
 ## Install
 ```shell
