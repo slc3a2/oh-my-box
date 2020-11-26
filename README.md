@@ -1,4 +1,4 @@
-## OhMyBox
+## oh-my-box
 >A Scroll Component for Vue.js
 <div><img width='200px' src='https://i.loli.net/2020/04/17/d9IurLPOT3qWfAv.gif' alt='example image'/></div>
 
