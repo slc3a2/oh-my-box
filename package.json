@@ -7,13 +7,13 @@
   "keywords": "vue tiktok scroll component box tool",
   "private": false,
   "license": "MIT",
-  "homepage": "https://github.com/llqi/oh-my-box",
-  "repository": "git://github.com/llqi/oh-my-box",
+  "homepage": "https://github.com/codedance98/oh-my-box",
+  "repository": "git://github.com/codedance98/oh-my-box",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
-    "url": "https://github.com/llqi/oh-my-box/issues"
+    "url": "https://github.com/codedance98/oh-my-box/issues"
   },
   "scripts": {
     "serve": "vue-cli-service serve",
