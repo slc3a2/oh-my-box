@@ -61,9 +61,6 @@ export default {
 		click: {
 			default: ()=>{}
 		}
-
-	},
-	computed: {
 	},
 	data: () => {
 		return {
@@ -155,14 +152,21 @@ export default {
 				this.resetOffsetHandle()
 				this.$emit('change', this.page, itemLength, this._self)
 			}
-			
 		},
 		// 重置偏移量
 		resetOffsetHandle() {
 			this.currentPosition = -this.page * (this.itemHeight || this.defaultItemHeight)
 		},
-		onresize(){
+		// 页面窗口改变重置item高度
+		onresize() {
 			this.defaultItemHeight = window.innerHeight;
+		},
+		// 强制滑动到对应下标item位置
+		forceScrollHandle(idx) {
+			if(idx) {
+				this.page = idx;
+				this.currentPosition = -this.page * (this.itemHeight || this.defaultItemHeight)
+			}
 		}
 	}
 }

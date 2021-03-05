@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <button @click='scroll(2)'>强制滚动到下标为2的item</button>
     <OhMyBox
       :scrollHeight='scrollHeight'
       :quickScrollHeight='quickScrollHeight'
@@ -8,6 +9,7 @@
       :clickDistance='clickDistance'
       @change='change'
       @click='click'
+      ref='ohmycookie'
     >
       <OhMyBoxItem class='item' v-for='(item, idx) in 5' :key='idx'>{{item}}</OhMyBoxItem>
     </OhMyBox>
@@ -33,6 +35,9 @@ export default {
     },
     click(idx, total, direction){
       console.log(idx, total, direction)
+    },
+    scroll(idx) {
+      this.$refs.ohmycookie.forceScrollHandle(idx);
     }
   },
   components: {

@@ -88,6 +88,11 @@ import 'ohmybox/lib/ohmybox.css'
         <th>点击方法</th>
         <th>(当前页下标，总下标，当前项对象)</th>
     </tr>
+    <tr>
+        <th>this.$refs.ele.forceScrollHandle</th>
+        <th>强制滚动到对应下标item</th>
+        <th>(要滚动到的item下标)</th>
+    </tr>
 </table>
 
 

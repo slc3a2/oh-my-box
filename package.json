@@ -9,7 +9,7 @@
   "license": "MIT",
   "homepage": "https://github.com/llqi/oh-my-box",
   "repository": "git://github.com/llqi/oh-my-box",
-  "publishConfig": { 
+  "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "bugs": {
