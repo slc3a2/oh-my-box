@@ -1,6 +1,6 @@
 {
   "name": "@codedance98/ohmybox",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "codedance98 <codedance98@gmail.com>",
   "description": "A Scroll Component for Vue.js.",
   "main": "lib/ohmybox.common.js",
