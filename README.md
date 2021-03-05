@@ -3,8 +3,8 @@
 <div><img width='200px' src='https://i.loli.net/2020/04/17/d9IurLPOT3qWfAv.gif' alt='example image'/></div>
 
 ## Links
-- [Homepage](https://github.com/llqi/oh-my-box)
-- [Bugs](https://github.com/llqi/oh-my-box/issues)
+- [Homepage](https://github.com/codedance98/oh-my-box)
+- [Bugs](https://github.com/codedance98/oh-my-box/issues)
 - [Npm](https://www.npmjs.com/package/ohmybox)
 
 ## Install
