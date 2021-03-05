@@ -164,8 +164,13 @@ export default {
 		// 强制滑动到对应下标item位置
 		forceScrollHandle(idx) {
 			if(idx) {
-				this.page = idx;
-				this.currentPosition = -this.page * (this.itemHeight || this.defaultItemHeight)
+				this.$refs.ohmyboxContainter.classList.add('trans')
+				// 利用setTimeout是宏任务最后执行优化
+				setTimeout(()=> {
+					this.page = idx;
+					this.currentPosition = -this.page * (this.itemHeight || this.defaultItemHeight)
+				}, 0)
+				
 			}
 		}
 	}

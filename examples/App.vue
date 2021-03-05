@@ -9,7 +9,7 @@
       :clickDistance='clickDistance'
       @change='change'
       @click='click'
-      ref='ohmycookie'
+      ref='ohmybox'
     >
       <OhMyBoxItem class='item' v-for='(item, idx) in 5' :key='idx'>{{item}}</OhMyBoxItem>
     </OhMyBox>
@@ -37,7 +37,7 @@ export default {
       console.log(idx, total, direction)
     },
     scroll(idx) {
-      this.$refs.ohmycookie.forceScrollHandle(idx);
+      this.$refs.ohmybox.forceScrollHandle(idx);
     }
   },
   components: {

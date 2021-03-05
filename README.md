@@ -25,6 +25,7 @@ import 'ohmybox/lib/ohmybox.css'
   :clickDistance='clickDistance'
   @change='change'
   @click='click'
+  ref='ohmybox'
 >
   <OhMyBoxItem v-for='(item, idx) in 5' :key='idx'>{{item}}</OhMyBoxItem>
 </OhMyBox>
@@ -89,7 +90,7 @@ import 'ohmybox/lib/ohmybox.css'
         <th>(当前页下标，总下标，当前项对象)</th>
     </tr>
     <tr>
-        <th>this.$refs.ele.forceScrollHandle</th>
+        <th>this.$refs.ohmybox.forceScrollHandle</th>
         <th>强制滚动到对应下标item</th>
         <th>(要滚动到的item下标)</th>
     </tr>
