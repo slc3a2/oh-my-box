@@ -98,7 +98,7 @@ import 'ohmybox/lib/ohmybox.css'
 
 ## publish
 
- -**to github**:   
+ - **to github**:   
  
  ```shell
  npm login
@@ -112,7 +112,7 @@ import 'ohmybox/lib/ohmybox.css'
  npm publish
  ```
 
- -**to npm**:   
+ - **to npm**:   
  
 ```shell
  npm login
